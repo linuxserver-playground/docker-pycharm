@@ -8,9 +8,8 @@ summary: |-
 upstream:
   url: https://www.jetbrains.com/pycharm/
   version:
-    type: command
-    run: |-
-      curl -sL https://mirror.rackspace.com/archlinux/extra/os/x86_64/extra.db | tar tzf - | awk -F '(-|/)' '/pycharm-community-edition/ {print $4; exit}'
+    type: arch_package
+    package: pycharm-community-edition
 
 release:
   branch: master
